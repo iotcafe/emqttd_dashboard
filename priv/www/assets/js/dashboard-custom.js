@@ -36,33 +36,33 @@ jQuery.fn.pagination = function(pageInfo, module) {
 	var next = pagination.find(".next");
 	
 	if (pageInfo.totalNum == 0) {
-		previous.replaceWith('<button type="button" class="btn btn-white disabled previous">Previous</button>');
-		next.replaceWith('<button type="button" class="btn btn-white disabled next">Next</button>');
+		previous.replaceWith('<button type="button" class="btn btn-white disabled previous">上一页</button>');
+		next.replaceWith('<button type="button" class="btn btn-white disabled next">下一页</button>');
 		return;
 	}
 	if (pageInfo.currPage <= 1) {
-		previous.replaceWith('<button type="button" class="btn btn-white disabled previous">Previous</button>');
+		previous.replaceWith('<button type="button" class="btn btn-white disabled previous">上一页</button>');
 	} else {
-		previous.replaceWith('<button type="button" class="btn btn-white previous" onclick="'+module+'.setCurrPage('+(pageInfo.currPage-1)+');">Previous</button>');
+		previous.replaceWith('<button type="button" class="btn btn-white previous" onclick="'+module+'.setCurrPage('+(pageInfo.currPage-1)+');">上一页</button>');
 	}
 	if (pageInfo.currPage >= pageInfo.totalPage) {
-		next.replaceWith('<button type="button" class="btn btn-white disabled next">Next</button>');
+		next.replaceWith('<button type="button" class="btn btn-white disabled next">下一页</button>');
 	} else {
-		next.replaceWith('<button type="button" class="btn btn-white next" onclick="'+module+'.setCurrPage('+(pageInfo.currPage+1)+');">Next</button>');
+		next.replaceWith('<button type="button" class="btn btn-white next" onclick="'+module+'.setCurrPage('+(pageInfo.currPage+1)+');">下一页</button>');
 	}
 	
 	/*
 	var p = $(this).empty();
 	if (pageInfo.totalNum == 0) {
-		p.append('<li class="paginate_button previous disabled"><a href="javascript:;">Previous</a></li>');
-		p.append('<li class="paginate_button next disabled"><a href="javascript:;">Next</a></li>');
+		p.append('<li class="paginate_button previous disabled"><a href="javascript:;">上一页</a></li>');
+		p.append('<li class="paginate_button next disabled"><a href="javascript:;">下一页</a></li>');
 		return;
 	}
 	
 	if (pageInfo.currPage <= 1) {
-		p.append('<li class="paginate_button previous disabled"><a href="javascript:;">Previous</a></li>');
+		p.append('<li class="paginate_button previous disabled"><a href="javascript:;">上一页</a></li>');
 	} else {
-		p.append('<li class="paginate_button previous"><a href="javascript:;" onclick="'+module+'.setCurrPage('+(pageInfo.currPage-1)+');">Previous</a></li>');
+		p.append('<li class="paginate_button previous"><a href="javascript:;" onclick="'+module+'.setCurrPage('+(pageInfo.currPage-1)+');">上一页</a></li>');
 	}
 	
 	var len = 6;
@@ -105,9 +105,9 @@ jQuery.fn.pagination = function(pageInfo, module) {
 	}
 
 	if (pageInfo.currPage >= pageInfo.totalPage) {
-		p.append('<li class="paginate_button next disabled"><a href="javascript:;">Next</a></li>');
+		p.append('<li class="paginate_button next disabled"><a href="javascript:;">下一页</a></li>');
 	} else {
-		p.append('<li class="paginate_button next"><a href="javascript:;" onclick="'+module+'.setCurrPage('+(pageInfo.currPage+1)+');">Next</a></li>');
+		p.append('<li class="paginate_button next"><a href="javascript:;" onclick="'+module+'.setCurrPage('+(pageInfo.currPage+1)+');">下一页</a></li>');
 	}
 	*/
 }
@@ -287,7 +287,7 @@ function setMenuClass(modName) {
 	}
 	if (modName == 'websocket') {
 		if (!window.WebSocket) {
-			var msg = "WebSocket not supported by this browser.";
+			var msg = "您使用的浏览器不支持Websocket.";
 			alert(msg);
 			throw new Error(msg);
 		}
@@ -474,7 +474,7 @@ function showOverview() {
 				} else {
 					tby.append(
 							'<tr><td colspan="8">' +
-							'<p style="padding: 12px;">... no nodes ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -525,7 +525,7 @@ function showOverview() {
 				} else {
 					tby.append(
 							'<tr><td colspan="8">' +
-							'<p style="padding: 12px;">... no listeners ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -550,11 +550,11 @@ function showOverview() {
 function showClients() {
 	// 标题导航条
 	//$('#title_bar .description').text("Clients List");
-	$('#title_bar .title').text("Clients");
+	$('#title_bar .title').text("客户端");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Clients</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>客户端</strong></li>' +
 			'</ol>');
 	
 	// 加载Clients信息
@@ -634,7 +634,7 @@ function showClients() {
 				} else {
 					tby.append(
 							'<tr><td colspan="8">' +
-							'<p style="padding: 12px;">... no clients ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -649,11 +649,11 @@ function showClients() {
 function showSessions() {
 	// 标题导航条
 	//$('#title_bar .description').text("Sessions List");
-	$('#title_bar .title').text("Sessions");
+	$('#title_bar .title').text("会话");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Sessions</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>会话</strong></li>' +
 			'</ol>');
 	
 	// 加载Sessions信息
@@ -734,7 +734,7 @@ function showSessions() {
 				} else {
 					tby.append(
 							'<tr><td colspan="9">' +
-							'<p style="padding: 12px;">... no sessions ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -749,11 +749,11 @@ function showSessions() {
 function showTopics() {
 	// 标题导航条
 	//$('#title_bar .description').text("Topics List");
-	$('#title_bar .title').text("Topics");
+	$('#title_bar .title').text("主题");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Topics</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>主题</strong></li>' +
 			'</ol>');
 	
 	// 加载Topics信息
@@ -827,7 +827,7 @@ function showTopics() {
 				} else {
 					tby.append(
 							'<tr><td colspan="9">' +
-							'<p style="padding: 12px;">... no topics ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -842,11 +842,11 @@ function showTopics() {
 function showRoutes() {
 	// 标题导航条
 	//$('#title_bar .description').text("Routes List");
-	$('#title_bar .title').text("Routes");
+	$('#title_bar .title').text("路由");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Routes</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>路由</strong></li>' +
 			'</ol>');
 	
 	// 加载Routes信息
@@ -920,7 +920,7 @@ function showRoutes() {
 				} else {
 					tby.append(
 							'<tr><td colspan="9">' +
-							'<p style="padding: 12px;">... no routes ...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -935,11 +935,11 @@ function showRoutes() {
 function showSubscriptions() {
 	// 标题导航条
 	//$('#title_bar .description').text("Subscriptions List");
-	$('#title_bar .title').text("Subscriptions");
+	$('#title_bar .title').text("订阅");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Subscriptions</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>订阅</strong></li>' +
 			'</ol>');
 	
 	// 加载Subscriptions信息
@@ -1014,7 +1014,7 @@ function showSubscriptions() {
 				} else {
 					tby.append(
 							'<tr><td colspan="9">' +
-							'<p style="padding: 12px;">... no subscriptions...</p>' +
+							'<p style="padding: 12px;">没有找到相关记录!</p>' +
 							'</td></tr>');
 				}
 			} else {
@@ -1032,7 +1032,7 @@ function showWebsocket() {
 	$('#title_bar .title').text("Websocket");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
 			'<li class="active"><strong>Websocket</strong></li>' +
 			'</ol>');
 	
@@ -1104,7 +1104,7 @@ function showWebsocket() {
 		var options = {
 			onSuccess : function() {
 				console.log("The client connect success.");
-				$('#connect_state').text('CONNECTED');
+				$('#connect_state').text('已连接');
 				$('#connect_btn').addClass("disabled").removeClass("btn-success").addClass("btn-gray");
 				$('#disconnect_btn').removeClass("disabled").removeClass("btn-gray").addClass("btn-success");
 			}
@@ -1127,7 +1127,7 @@ function showWebsocket() {
 	wSocket.disconnect = function(client) {
 		client.disconnect();
 		console.log("The client disconnect success.");
-		$('#connect_state').text('DISCONNECTED');
+		$('#connect_state').text('已断开');
 		$('#connect_btn').removeClass("disabled").removeClass("btn-gray").addClass("btn-success");
 		$('#disconnect_btn').addClass("disabled").removeClass("btn-success").addClass("btn-gray");
 	};
@@ -1136,7 +1136,7 @@ function showWebsocket() {
 		var topic = $('#subscription').val();
 		client.subscribe(topic);
 		var nowStr = (new Date()).format("yyyy-MM-dd hh:mm:ss");
-		$('#subscriptions_list').append('<div>Subscribe Topic: ' 
+		$('#subscriptions_list').append('<div>订阅主题: ' 
 			+ topic + '<cite> ' 
 			+ nowStr + '</cite></div>');
 	};
@@ -1148,7 +1148,7 @@ function showWebsocket() {
 		message.destinationName = topic;
 		client.send(message);
 		var nowStr = (new Date()).format("yyyy-MM-dd hh:mm:ss");
-		$('#send_message_list').append('<div>Send Message: ' 
+		$('#send_message_list').append('<div>发送消息: ' 
 				+ msg + '<cite> ' 
 				+ nowStr + '</cite></div>');
 	};
@@ -1162,8 +1162,8 @@ function showUsers() {
 	$('#title_bar .title').text("Users");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
-			'<li class="active"><strong>Users</strong></li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
+			'<li class="active"><strong>管理员</strong></li>' +
 			'</ol>');
 	
 	// 加载Users信息
@@ -1216,7 +1216,7 @@ var User = {
 					} else {
 						tby.append(
 								'<tr><td colspan="9">' +
-								'<p style="padding: 12px;">... no users ...</p>' +
+								'<p style="padding: 12px;">没有找到相关记录!</p>' +
 								'</td></tr>');
 					}
 				} else {
@@ -1287,15 +1287,15 @@ var User = {
 			user.password = $.trim(m.find('#user_add_pwd').val());
 			user.pwd_1 = $.trim(m.find('#user_add_pwd_1').val());
 			if (user.user_name == '') {
-				alert("Username is required.");
+				alert("用户名不能为空.");
 				return;
 			}
 			if (user.password == '') {
-				alert("Password is required.");
+				alert("密码不能为空.");
 				return;
 			}
 			if (user.password != user.pwd_1) {
-				alert("Passwords do not match.");
+				alert("密码输入不一致.");
 				return;
 			}
 			dashApi.user_update(user, function(ret, err) {
@@ -1318,15 +1318,15 @@ var User = {
 			user.password = $.trim(m.find('#user_add_pwd').val());
 			user.pwd_1 = $.trim(m.find('#user_add_pwd_1').val());
 			if (user.user_name == '') {
-				alert("Username is required.");
+				alert("用户名不能为空.");
 				return;
 			}
 			if (user.password == '') {
-				alert("Password is required.");
+				alert("密码不能为空.");
 				return;
 			}
 			if (user.password != user.pwd_1) {
-				alert("Passwords do not match.");
+				alert("密码输入不一致.");
 				return;
 			}
 			dashApi.user_add(user, function(ret, err) {
@@ -1348,7 +1348,7 @@ function showHttpApi() {
 	$('#title_bar .title').text("HTTP API");
 	$('#title_bar .breadcrumb-env').html(
 			'<ol class="breadcrumb bc-1">' +
-			'<li><i class="fa-home"></i>Overview</li>' +
+			'<li><i class="fa-home"></i>概览</li>' +
 			'<li class="active"><strong>HTTP API</strong></li>' +
 			'</ol>');
 
