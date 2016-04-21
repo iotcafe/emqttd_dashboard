@@ -14,12 +14,8 @@
 
 			<div class="panel-body">
 
-				<p class="ta-left leading">Apart from this help page, all URIs
-					will serve only resources of type application/json, and will
-					require HTTP basic authentication. The default user is admin/admin.</p>
-				<p class="ta-left leading">The emqttd_dashboard plugin provides
-                a web management console. The Dashboard helps monitor broker's running status, 
-                statistics and metrics of MQTT packets.</p>
+				<p class="ta-left leading">除了这个帮助页面, 所有的URI提供的数据类型都是application/json, 并且都要求HTTP基本身份验证. 默认的用户名/密码是 admin/admin.</p>
+				<p class="ta-left leading">此emqttd_dashboard插件提供web管理控制台。仪表板帮助管理员监测broker（消息转发器）的运行状态，并对MQTT数据包进行统计和度量。</p>
 			</div>
 		</div>
 
@@ -36,61 +32,61 @@
 				<thead>
 					<tr>
 						<th>GET</th>
-						<th>Path</th>
-						<th>Description</th>
+						<th>路径</th>
+						<th>描述</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/stats">/api/stats </a></td>
-						<td>The Statistics of Clients, Sessions, Topics and Subscriptions</td>
+						<td>获取对客户端、会话、主题和订阅的统计</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/nodes">/api/nodes</a></td>
-						<td>List of clustered nodes</td>
+						<td>获取集群节点列表</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/metrics">/api/metrics</a></td>
-						<td>The broker metrics</td>
+						<td>获取broker（消息转发器）的度量</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/listeners">/api/listeners</a></td>
-						<td>List of all TCP listeners</td>
+						<td>获取TCP监听端列表</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/clients">/api/clients</a></td>
-						<td>List of all connected clients</td>
+						<td>获取全部已连接的客户端列表</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/sessions">/api/sessions</a></td>
-						<td>List of all sessions</td>
+						<td>获取全部会话列表</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/topics">/api/topics</a></td>
-						<td>List of all Topics</td>
+						<td>获取所有消息主题列表</td>
                     </tr>
 	            	<tr>
 						<td>X</td>
 						<td><a href="/api/routes">/api/routes</a></td>
-						<td>List of all routes</td>
+						<td>获取全部路由列表</td>
 					</tr>
 					<tr>
 						<td>X</td>
 						<td><a href="/api/subscriptions">/api/subscriptions</a></td>
-						<td>List of all Subscriptions</td>
+						<td>获取所有消息订阅列表</td>
 					</tr>
 
 					<tr>
 						<td>X</td>
 						<td><a href="/api/users">/api/users</a></td>
-						<td>List of all admins</td>
+						<td>获取管理员列表</td>
 					</tr>
 
 				</tbody>
