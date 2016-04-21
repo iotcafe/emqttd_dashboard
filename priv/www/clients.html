@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title">
-            All Clients
+            客户端列表
         </h3>
 
         <div class="panel-options">
@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success btn-single" onclick="clients.search($.trim($('#user_key').val()));" type="button">Search</button>
+                        <button class="btn btn-success btn-single" onclick="clients.search($.trim($('#user_key').val()));" type="button">搜索</button>
                     </div>
 
                 </form>
@@ -36,13 +36,13 @@
                 <thead>
                     <tr>
                         <th>ClientId</th>
-                        <th>Username</th>
-                        <th>IPAddr</th>
-                        <th>Port</th>
+                        <th>用户名</th>
+                        <th>IP地址</th>
+                        <th>端口</th>
                         <th>CleanSess</th>
-                        <th>ProtoVer</th>
-                        <th>Keepalive(s)</th>
-                        <th>ConnectedAt</th>
+                        <th>协议版本</th>
+                        <th>保活时常</th>
+                        <th>连接时间</th>
                     </tr>
                 </thead>
 
@@ -54,16 +54,16 @@
 
         <div class="row">
             <div class="col-sm-6">
-                showing <span id="clients_count_start">0</span> - <span id="clients_count_end">0</span> of <span id="clients_count_all">0</span> records
+                显示 <span id="clients_count_start">0</span> - <span id="clients_count_end">0</span>/<span id="clients_count_all">0</span> 记录
             </div>
             <div class="col-sm-6">
                 <div class="pull-right" id="pagination">
                 <button type="button" class="btn btn-white disabled previous">
-                   Previous
+                   上一页
                 </button>
                 <div class="btn-group">
                     <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
-                        records per page <strong id="page_size">100</strong> <span class="caret"></span>
+                        每页显示 <strong id="page_size">100</strong> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-white" role="menu">
                         <li>
@@ -81,7 +81,7 @@
                     </ul>
                 </div>
                 <button type="button" class="btn btn-white disabled next">
-                   Next
+                   下一页
                 </button>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title">All Topics </h3>
+        <h3 class="panel-title">主题列表 </h3>
 
         <div class="panel-options">
             <a href="#" data-toggle="panel"> <span class="collapse-icon">–</span>
@@ -15,11 +15,11 @@
                 <form role="form" class="form-inline pull-right" onsubmit="return false;">
                     <div class="form-group">
                         <input type="text" class="form-control" size="25"
-                            placeholder="Topic" id="topic_key" onchange="topics.search($.trim($('#topic_key').val()));"/>
+                            placeholder="主题" id="topic_key" onchange="topics.search($.trim($('#topic_key').val()));"/>
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success btn-single" onclick="topics.search($.trim($('#topic_key').val()));" type="button">Search</button>
+                        <button class="btn btn-success btn-single" onclick="topics.search($.trim($('#topic_key').val()));" type="button">搜索</button>
                     </div>
 
                 </form>
@@ -33,8 +33,8 @@
                 <table class="table table-hover" id="topics">
                     <thead>
                         <tr>
-                            <th>Topic</th>
-                            <th>Flags</th>
+                            <th>主题</th>
+                            <th>标记</th>
                         </tr>
                     </thead>
 
@@ -47,16 +47,16 @@
         
         <div class="row">
             <div class="col-sm-6">
-              showing <span id="topics_count_start">0</span> - <span id="topics_count_end">0</span> of <span id="topics_count_all">0</span> records
+              显示 <span id="topics_count_start">0</span> - <span id="topics_count_end">0</span>/<span id="topics_count_all">0</span> 记录
             </div>
             <div class="col-sm-6">
                 <div class="pull-right" id="pagination">
                 <button type="button" class="btn btn-white disabled previous">
-                   Previous
+                   上一页
                 </button>
                 <div class="btn-group">
                     <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
-                        records per page <strong id="page_size">100</strong> <span class="caret"></span>
+                        每页显示 <strong id="page_size">100</strong> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-white" role="menu">
                         <li>
@@ -74,7 +74,7 @@
                     </ul>
                 </div>
                 <button type="button" class="btn btn-white disabled next">
-                   Next
+                   下一页
                 </button>
                 </div>
             </div>

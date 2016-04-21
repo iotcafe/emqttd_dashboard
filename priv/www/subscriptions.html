@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title">All Subscriptions</h3>
+        <h3 class="panel-title">订阅列表</h3>
 
         <div class="panel-options">
             <a href="#" data-toggle="panel"> <span class="collapse-icon">–</span>
@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button class="btn btn-success btn-single" onclick="subscriptions.search($.trim($('#user_key').val()));" type="button">Search</button>
+                        <button class="btn btn-success btn-single" onclick="subscriptions.search($.trim($('#user_key').val()));" type="button">搜索</button>
                     </div>
 
                 </form>
@@ -34,7 +34,7 @@
                     <thead>
                         <tr>
                             <th>ClientId</th>
-                            <th>Topic</th>
+                            <th>主题</th>
                             <th>QoS</th>
                         </tr>
                     </thead>
@@ -49,16 +49,16 @@
         
         <div class="row">
             <div class="col-sm-6">
-              showing <span id="subscriptions_count_start">0</span> - <span id="subscriptions_count_end">0</span> of <span id="subscriptions_count_all">0</span> records
+              显示 <span id="subscriptions_count_start">0</span> - <span id="subscriptions_count_end">0</span>/<span id="subscriptions_count_all">0</span> 记录
             </div>
             <div class="col-sm-6">
                 <div class="pull-right" id="pagination">
                 <button type="button" class="btn btn-white disabled previous">
-                   Previous
+                   上一页
                 </button>
                 <div class="btn-group">
                     <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
-                        records per page <strong id="page_size">100</strong> <span class="caret"></span>
+                        每页显示 <strong id="page_size">100</strong> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-white" role="menu">
                         <li>
@@ -76,7 +76,7 @@
                     </ul>
                 </div>
                 <button type="button" class="btn btn-white disabled next">
-                   Next
+                   下一页
                 </button>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Connection</h3>
+				<h3 class="panel-title">连接</h3>
 			</div>
 			<div class="panel-body">
 
@@ -13,14 +13,14 @@
                     
                     <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="host">Host:</label> <input type="text"
-                            class="form-control" id="host" placeholder="Host IP">
+                        <label for="host">服务器:</label> <input type="text"
+                            class="form-control" id="host" placeholder="服务器IP地址">
                     </div>
                     </div>
                     
                     <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="port">Port:</label> <input type="text"
+                        <label for="port">端口:</label> <input type="text"
                             class="form-control" id="port"
                             placeholder="Port">
                     </div>
@@ -40,25 +40,25 @@
                     
                     <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="user_name">User Name:</label> <input type="text"
+                        <label for="user_name">用户名:</label> <input type="text"
                             class="form-control" id="user_name"
-                            placeholder="User Name">
+                            placeholder="用户名">
                     </div>
                     </div>
                     
                     <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="password">Password:</label> <input type="password"
+                        <label for="password">密码:</label> <input type="password"
                             class="form-control" id="password"
-                            placeholder="Password">
+                            placeholder="密码">
                     </div>
                     </div>
                     
                     <div class="col-sm-4">
                     <div class="form-group">
-                        <label for="keep_alive">Keep Alive:</label> <input type="text"
+                        <label for="keep_alive">保活时长:</label> <input type="text"
                             class="form-control" id="keep_alive"
-                            placeholder="Keep Alive">
+                            placeholder="保活时长">
                     </div>
                     </div>
                     
@@ -68,12 +68,12 @@
                     
                     <div class="col-sm-12">
                     <div class="form-group">
-                        <button type="button" class="btn btn-success btn-single" id="connect_btn">Connect</button>
-                        <button type="button" class="btn btn-gray btn-single disabled" id="disconnect_btn">Disconnect</button>
+                        <button type="button" class="btn btn-success btn-single" id="connect_btn">连接</button>
+                        <button type="button" class="btn btn-gray btn-single disabled" id="disconnect_btn">断开连接</button>
                     </div>
                     <div class="form-group">
                         <label class="cbr-inline">
-                            Current State: <strong id="connect_state" class="text-danger">DISCONNECT</strong>
+                            当前状态: <strong id="connect_state" class="text-danger">DISCONNECT</strong>
                         </label>
                     </div>
                     </div>
@@ -91,7 +91,7 @@
 	
 	<div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Receive Message</h3>
+                <h3 class="panel-title">收到消息</h3>
             </div>
             <div class="panel-body" id="receive_message">
 
@@ -108,7 +108,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Subscription</h3>
+                <h3 class="panel-title">订阅</h3>
             </div>
             <div class="panel-body">
 
@@ -118,9 +118,9 @@
                     
                     <div class="col-sm-12">
                     <div class="form-group">
-                        <label for="subscription">Subscription:</label> <input type="text"
+                        <label for="subscription">订阅:</label> <input type="text"
                             class="form-control" id="subscription"
-                            placeholder="Subscription" value="/World">
+                            placeholder="订阅" value="/World">
                     </div>
                     </div>
                     
@@ -130,7 +130,7 @@
                     
                     <div class="col-sm-12">
                     <div class="form-group">
-                        <button type="button" class="btn btn-success btn-single" id="subscribe_btn">Subscribe</button>
+                        <button type="button" class="btn btn-success btn-single" id="subscribe_btn">订阅</button>
                     </div>
                     </div>
                     
@@ -147,7 +147,7 @@
     
     <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Subscriptions List</h3>
+                <h3 class="panel-title">订阅列表</h3>
             </div>
             <div class="panel-body" id="subscriptions_list">
 
@@ -164,7 +164,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Send Message</h3>
+                <h3 class="panel-title">发送消息</h3>
             </div>
             <div class="panel-body">
 
@@ -174,14 +174,14 @@
                     
                     <div class="col-sm-12">
                     <div class="form-group">
-                        <label for="topic">Topic:</label> <input type="text"
+                        <label for="topic">主题:</label> <input type="text"
                             class="form-control" id="topic"
                             placeholder="Topic" value="/World">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label> <input type="text"
+                        <label for="message">内容:</label> <input type="text"
                             class="form-control" id="message"
-                            placeholder="Message" value="Hello world!">
+                            placeholder="消息内容" value="Hello world!">
                     </div>
                     </div>
                     
@@ -191,7 +191,7 @@
                     
                     <div class="col-sm-12">
                     <div class="form-group">
-                        <button type="button" class="btn btn-success btn-single" id="send_btn">Send</button>
+                        <button type="button" class="btn btn-success btn-single" id="send_btn">发送</button>
                     </div>
                     </div>
                     
@@ -208,7 +208,7 @@
     
     <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Send Message List</h3>
+                <h3 class="panel-title">已发送消息</h3>
             </div>
             <div class="panel-body" id="send_message_list">
 
