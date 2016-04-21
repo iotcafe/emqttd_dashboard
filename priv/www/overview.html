@@ -10,10 +10,10 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr>
-							<th>System Name</th>
-							<th>Version</th>
-							<th>Uptime</th>
-							<th>System Time</th>
+							<th>系统名称</th>
+							<th>版本</th>
+							<th>运行时间</th>
+							<th>系统时间</th>
 						</tr>
 					</thead>
 
@@ -39,7 +39,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					Nodes (<em id="nodes_count">0</em>)
+					节点 (<em id="nodes_count">0</em>)
 				</h3>
 			</div>
 			<div class="panel-body">
@@ -47,14 +47,14 @@
 				<table class="table table-condensed" id="nodes">
 					<thead>
 						<tr>
-							<th>Name</th>
-							<th>Erlang Processes<br />(used / avaliable)
+							<th>名称</th>
+							<th>Erlang进程<br />(已使用 / 可用)
 							</th>
-							<th>CPU Info<br />(1load / 5load / 15load)
+							<th>CPU<br />(1load / 5load / 15load)
 							</th>
-							<th>Memory Info<br />(used / total)
+							<th>内存<br />(已使用 / 总量)
 							</th>
-							<th>MaxFds</th>
+							<th>最大Fds</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -72,7 +72,7 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Stats</h3>
+				<h3 class="panel-title">统计</h3>
 			</div>
 			<div class="panel-body">
 				<div class="table-responsive" data-pattern="priority-columns"
@@ -81,20 +81,20 @@
 					<table class="table table-condensed" id="stats">
 						<thead>
 							<tr>
-								<th>Clients/Count</th>
-								<th>Clients/Max</th>
-								<th>Retained/Count</th>
-								<th>Retained/Max</th>
-								<th>Routes/Count</th>
-								<th>Routes/Max</th>
-								<th>Sessions/Count</th>
-								<th>Sessions/Max</th>
-								<th>Subscribers/Count</th>
-								<th>Subscribers/Max</th>
-								<th>Subscriptions/Count</th>
-								<th>Subscriptions/Max</th>
-								<th>Topics/Count</th>
-								<th>Topics/Max</th>
+								<th>客户端/数量</th>
+								<th>客户端/最大值</th>
+								<th>已保持/数量</th>
+								<th>已保持/最大值</th>
+								<th>路由/数量</th>
+								<th>路由/最大值</th>
+								<th>会话/数量</th>
+								<th>会话/最大值</th>
+								<th>订阅者/数量</th>
+								<th>订阅者/最大值</th>
+								<th>订阅量/数量</th>
+								<th>订阅量/最大值</th>
+								<th>主题/数量</th>
+								<th>主题/最大值</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -128,13 +128,13 @@
 
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Metrics</h3>
+				<h3 class="panel-title">统计</h3>
 			</div>
 			<div class="panel-body">
 
 				<div class="row">
 					<div class="col-sm-4">
-						<strong>Packets</strong>
+						<strong>包统计</strong>
 						<table class="table table-bordered table-striped table-condensed table-hover">
 							<tbody>
 								<!-- received/sent -->
@@ -238,7 +238,7 @@
 						</table>
 					</div>
 					<div class="col-sm-4">
-						<strong>Messages</strong>
+						<strong>消息统计</strong>
 						<table class="table table-bordered table-striped table-condensed table-hover">
 							<tbody>
 								<!-- received -->
@@ -292,7 +292,7 @@
 						</table>
 					</div>
 					<div class="col-sm-4">
-						<strong>Bytes</strong>
+						<strong>字节数</strong>
 						<table class="table table-bordered table-striped table-condensed table-hover">
 							<tbody>
 								<tr>
@@ -319,7 +319,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
-					Listeners (<em id="listeners_count">0</em>)
+					监控 (<em id="listeners_count">0</em>)
 				</h3>
 			</div>
 			<div class="panel-body">
@@ -327,10 +327,10 @@
 				<table class="table table-condensed" id="listeners">
 					<thead>
 						<tr>
-							<th>Protocol</th>
-							<th>Port</th>
-							<th>max_clients</th>
-							<th>current_clients</th>
+							<th>协议</th>
+							<th>端口</th>
+							<th>最大连接数</th>
+							<th>当前连接数</th>
 						</tr>
 					</thead>
 					<tbody>
